@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa de Satisfação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Pesquisa de Satisfação</h1>
+  <form action="submit.php" method="post">
+    <h2>Dados Pessoais</h2>
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" name="telefone" id="telefone" required>
+
+    <h2>Pesquisa</h2>
+    <h3>1. Qual a sua avaliação geral da nossa empresa?</h3>
+    <div class="radio-group">
+      <input type="radio" name="avaliacao" value="excelente" id="excelente">
+      <label for="excelente">Excelente</label>
+      <br>
+      <input type="radio" name="avaliacao" value="boa" id="boa">
+      <label for="boa">Boa</label>
+      <br>
+      <input type="radio" name="avaliacao" value="regular" id="regular">
+      <label for="regular">Regular</label>
+      <br>
+      <input type="radio" name="avaliacao" value="ruim" id="ruim">
+      <label for="ruim">Ruim</label>
+      <br>
+      <input type="radio" name="avaliacao" value="pessima" id="pessima">
+      <label for="pessima">Péssima</label>
+    </div>
+
+    <h3>2. Você recomendaria nossa empresa para amigos ou familiares?</h3>
+    <div class="radio-group">
+      <input type="radio" name="recomendacao" value="sim" id="sim">
+      <label for="sim">Sim</label>
+      <br>
+      <input type="radio" name="recomendacao" value="nao" id="nao">
+      <label for="nao">Não</label>
+    </div>
+
+    <h3>3. Qual o motivo da sua resposta?</h3>
+    <select name="motivo">
+      <option value="">Selecione um motivo</option>
+      <option value="preco">Preço</option>
+      <option value="qualidade">Qualidade do produto/serviço</option>
+      <option value="atendimento">Atendimento ao cliente</option>
+      <option value="outro">Outro</option>
+    </select>
+    <input type="text" name="motivo_outro" placeholder="Especifique (se motivo for 'Outro')">
+
+    <label for="autorizacao">
+      <input type="checkbox" name="autorizacao" id="autorizacao">
+      Autorizo o compartilhamento da minha resposta com terceiros
+    </label>
+
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>
